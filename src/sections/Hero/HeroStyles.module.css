@@ -1,63 +1,57 @@
-.container {
+   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Center align items horizontally */
     gap: 20px;
     text-align: center;
     height: 100dvh;
     min-height: 500px;
+  }
   
-    .hero {
-      max-width: 200px;
-    }
-
-    h2{
-      text-shadow: 0 5px 2px #827b7b;
-    }
+  .hero {
+    max-width: 200px;
+  }
   
-    span {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
+  h2 {
+    text-shadow: 0 5px 2px #827b7b;
+  }
   
-      a {
-        margin: 0;
+  span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
   
-        img {
-          width: 30px;
-        }
-      }
-    }
+  a {
+    width: fit-content;
+    align-self: center;
+  }
   
-    a {
-      width: fit-content;
-      align-self: center;
-    }
-    a img:hover{
-      filter: brightness(2.5);
-    }
+  a img:hover {
+    filter: brightness(2.5);
+  }
   
-    button {
-      background-color: var(--btn-color);
-      color: var(--btn-text-color);
-      border: none;
-      border-radius: 20px;
-      width: 126px;
-      height: 50px;
-      font-size: 20px;
-      font-weight: bold;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-    }
+  button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 20px;
+    width: 126px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  }
   
-    button:hover {
-      transform: scale(1.05);
-    }
+  button:hover {
+    transform: scale(1.05);
+  }
   
-    button:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-    }
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   }
   
   .colorModeContainer {
@@ -76,33 +70,62 @@
   
   .description {
     max-width: 24ch;
+    margin: 0 auto; /* Center align horizontally */
   }
   
   .info {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center; /* Center align items horizontally */
   }
+
+  .icon {
+    width: 32px; /* Set the width */
+    height: 33px; /* Maintain aspect ratio */
+    background-color: var(--icon-bg-color); /* Background color for icon */
+    padding: 5px; /* Add some padding to separate the icon from the background */
+    border-radius: 11%; /* Make the background circular */
+  }
+
+  .icon:hover{
+    filter: brightness(2.5);
+  }
+  
+  .icon path {
+    fill: var(--icon-color); /* Fill color for the icon */
+  }
+  
+  /* Theme-specific styles */
+  body[data-theme="light"] .icon {
+    --icon-bg-color: #222121;
+    --icon-color: white;
+  }
+  
+  body[data-theme="dark"] .icon {
+    --icon-bg-color: white;
+    --icon-color: #252323;
+  }
+  
+  
   
   @media (width >= 800px) {
     .container {
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-evenly;
+    }
   
-      .hero {
-        max-width: 350px;
-        width: 350px;
-      }
+    .hero {
+      max-width: 350px;
+      width: 350px;
     }
   }
   
   @media (width >= 1400px) {
-    .container {
-      .hero {
-        max-width: 400px;
-        width: 400px;
-      }
+    .container .hero {
+      max-width: 400px;
+      width: 400px;
     }
   }
   

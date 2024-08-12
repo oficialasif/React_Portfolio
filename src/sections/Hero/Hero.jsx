@@ -2,8 +2,6 @@ import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/Design uten navn.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
-import twitterLight from "../../assets/twitter-light.svg";
-import twitterDark from "../../assets/twitter-dark.svg";
 import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
@@ -15,7 +13,25 @@ function Hero() {
   const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === "light" ? sun : moon;
-  const twitterIcon = theme === "light" ? twitterLight : twitterDark;
+  const facebookIcon = theme === "light" ? (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 320 512"
+      className={styles.icon}
+      aria-label="Facebook icon"
+    >
+      <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+    </svg>
+  ) : (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 320 512"
+      className={styles.icon}
+      aria-label="Facebook icon"
+    >
+      <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+    </svg>
+  );
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
 
@@ -42,8 +58,8 @@ function Hero() {
         </h1>
         <h2>Frontend Developer</h2>
         <span>
-          <a href="https://twitter.com/oficialasif" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
+          <a href="https://facebook.com/oficialasif" target="_blank">
+            {facebookIcon}
           </a>
           <a href="https://github.com/oficialasif" target="_blank">
             <img src={githubIcon} alt="Github icon" />
@@ -53,8 +69,8 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-        A dedicated frontend web developer with over three years of hands-on experience
-        creating responsive websites.
+          A dedicated frontend web developer with over three years of hands-on experience
+          creating responsive websites.
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
