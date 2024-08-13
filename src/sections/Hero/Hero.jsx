@@ -58,7 +58,7 @@ function Hero() {
         </h1>
         <h2>Frontend Developer</h2>
         <span>
-          <a href="https://facebook.com/oficialasif" target="_blank">
+          <a href="https://facebook.com/OficiAlasif" target="_blank">
             {facebookIcon}
           </a>
           <a href="https://github.com/oficialasif" target="_blank">
