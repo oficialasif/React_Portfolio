@@ -25,7 +25,7 @@ function Projects() {
         />
         <ProjectCard
           src={stylora2}
-          link="#"
+          link="https://oficialasif.github.io/STYLORA-Ecommerce-2"
           h3="STYLORA-2"
           p="An Online Shopping Site"
         />

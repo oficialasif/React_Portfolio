@@ -5,7 +5,7 @@
     align-items: center; /* Center align items horizontally */
     gap: 20px;
     text-align: center;
-    height: 100dvh;
+    height: 100vh;
     min-height: 500px;
   }
   
@@ -14,6 +14,7 @@
   }
   
   h2 {
+    
     text-shadow: 0 5px 2px #827b7b;
   }
   
@@ -109,11 +110,20 @@
   
   
   
+  @media (width < 800px) {
+    .container {
+      margin-top: 70px;
+    }
+
+    
+  }
+
   @media (width >= 800px) {
     .container {
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-evenly;
+      
     }
   
     .hero {
